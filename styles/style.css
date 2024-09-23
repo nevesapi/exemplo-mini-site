@@ -1,0 +1,376 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  /* background-image: url(../imagens/oriental-tiles.png); */
+
+  background-color: #4158d0;
+  background-image: linear-gradient(
+    90deg,
+    #4158d0 0%,
+    #c850c0 46%,
+    #ffcc70 100%
+  );
+
+  background-attachment: fixed;
+
+  animation: bannerGradient 15s infinite ease;
+  background-size: 400% 400%;
+}
+
+nav {
+  text-align: center;
+}
+
+nav a {
+  background-color: #f72267;
+  color: #fafafa;
+
+  text-decoration: none;
+
+  display: inline-block;
+  padding: 10px;
+
+  width: 33.33%;
+
+  transition: all 0.3s;
+}
+
+nav a:hover,
+nav a:focus {
+  background-color: #ce124e;
+  transform: scale(1.05);
+}
+
+img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+b {
+  background: linear-gradient(to left, #e4c01e6e, #1ee4c36e, #e41e1e6e);
+  padding: 3px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.container {
+  background-color: #ffffffe0;
+
+  width: 70%;
+  margin: auto;
+  padding: 10px;
+
+  border-radius: 10px;
+  box-shadow: 7px 7px 20px #e41e1e;
+}
+
+.lists {
+  background: linear-gradient(to right, #e4c01e6e, #1ee4c36e, #e41e1e6e);
+
+  text-align: left;
+
+  width: 70%;
+  padding: 4%;
+  margin: auto;
+
+  border-top: 4px solid #e41edae3;
+  border-bottom: 4px solid #e41edae3;
+  box-shadow: 3px 3px 10px #cd1ee493;
+}
+
+p {
+  color: #1c1c1c;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.center {
+  text-align: center;
+}
+
+.detach {
+  padding: 4px;
+
+  background: linear-gradient(90deg, #ac2dc4, #24c4c8, #f72267);
+
+  border-radius: 8px;
+  color: #fafafa;
+}
+
+figure {
+  text-align: center;
+
+  max-width: 419px;
+  margin: 0 auto;
+
+  transition: 0.5s;
+
+  position: relative;
+}
+
+figure img {
+  border: solid 3px rgb(155, 197, 39);
+}
+
+figcaption {
+  font-weight: bold;
+
+  color: #ffffffd8;
+  background-color: #151f30c4;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 4px;
+
+  border-radius: 0 0 4px 4px;
+  padding: 15px 0;
+}
+
+figure:hover {
+  transform: scale(1.05);
+}
+
+ol li {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+ul li {
+  list-style: lower-greek;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+ul li::marker {
+  content: "🕯 ";
+  font-size: 1.2em;
+}
+ul li:first-child {
+  background-color: #ac2dc4;
+}
+
+ul li:last-child {
+  background-color: #e41e1e;
+}
+
+ul li:nth-child(6) {
+  background-color: orange;
+}
+ul li a {
+  color: #fafafa;
+  transition: all 0.3s;
+}
+
+ul li a:hover {
+  color: #1e31e0;
+}
+
+details {
+  background: linear-gradient(to left, #ac2dc4, #24c4c8, #f72267);
+  color: #fafafa;
+
+  font-weight: bold;
+
+  padding: 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+summary {
+  transition: all 0.5s;
+}
+
+summary::marker {
+  content: "🧐 ";
+}
+
+details:hover {
+  background-color: orange;
+}
+
+details[open] summary::marker {
+  content: "😎 ";
+}
+
+.float-img {
+  float: left;
+  margin-right: 12px;
+}
+
+h1,
+h2 {
+  background: linear-gradient(to right, red, blue, green);
+  background-clip: text;
+  color: transparent;
+}
+
+h3,
+h4 {
+  font-size: 22px;
+}
+
+h3 {
+  color: #227b7c;
+}
+
+h4 {
+  background: linear-gradient(to right, #ac2dc4, #24c4c8, #f72267);
+  background-clip: text;
+  color: transparent;
+  margin: 10px 0px;
+}
+
+hr {
+  border: 1px solid #ffa60073;
+}
+
+hr + p a {
+  background-color: #227b7c;
+  color: #fafafa;
+
+  cursor: pointer;
+
+  padding: 5px 10px;
+
+  text-decoration: none;
+  border-radius: 4px;
+
+  transition: all 0.3s;
+}
+
+hr + p a:hover {
+  background-color: #259c9e;
+}
+
+p img {
+  transition: all 1s;
+}
+
+p img:hover {
+  transform: scale(1.05);
+}
+
+.animaColor {
+  animation: changeColor 1s cubic-bezier(1, 0, 0, 1) 2s infinite alternate;
+
+  /* 
+    animation-name: changeColor;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out ou cubic-bezier(1, 0, 0, 1);
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate; 
+  */
+
+  will-change: transform;
+}
+
+@keyframes changeColor {
+  from {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    text-shadow: 0 0 10px #c850c0;
+  }
+}
+
+.newAnimaColor {
+  animation: newChangeColor 2s cubic-bezier(1, 0, 0, 1) 3s infinite alternate;
+  display: inline-block;
+}
+@keyframes newChangeColor {
+  0% {
+    color: #227b7c;
+  }
+  30% {
+    color: #ac2dc4;
+    transform: translateX(250px);
+    opacity: 0.5;
+  }
+  70% {
+    transform: translateX(150px) scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+    color: #ffa500;
+  }
+}
+
+/* Desafio banner */
+.banner {
+  text-align: center;
+
+  width: 60%;
+  margin: 0 auto;
+
+  background: linear-gradient(45deg, #13f78c, #0be6e6, #f700c5);
+  background-size: 400% 400%;
+
+  position: relative;
+  overflow: hidden;
+
+  transition: 1s;
+  animation: bannerGradient 15s infinite ease;
+}
+.banner:hover {
+  transform: scale(1.5);
+  border-radius: 5px;
+}
+
+.bannerImg {
+  animation: animaImg 2.5s alternate infinite linear;
+}
+@keyframes animaImg {
+  from {
+    transform: translateX(-300px) rotate(0deg);
+  }
+  to {
+    transform: translateX(300px) rotate(360deg);
+  }
+}
+
+.bannerText {
+  font-size: 20px;
+  font-weight: normal;
+
+  background-color: #55575ac4;
+
+  color: #ffffffd8;
+
+  position: absolute;
+  bottom: 0px;
+
+  width: 100%;
+  /* margin: 0; */
+  padding: 7px 0;
+
+  animation: animaText 2s alternate infinite linear;
+  will-change: transform;
+}
+@keyframes animaText {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.3);
+    background-color: #0d4dbbcc;
+  }
+}
+
+@keyframes bannerGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
